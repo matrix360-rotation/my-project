@@ -1,12 +1,14 @@
 {
-  "routes": [
+  "rewrites": [
     {
-      "src": "/.*",
-      "dest": "/index.html",
+      "source": "/admin",
+      "destination": "/admin.html",
+      "methods": ["GET"]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html",
       "methods": ["GET"]
     }
-  ],
-  "rewrites": [
-    { "source": "/admin", "destination": "/admin.html" }
   ]
 }
