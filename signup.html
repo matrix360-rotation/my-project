@@ -1,0 +1,46 @@
+<!-- signup.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXN Tutor - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="signup-container">
+        <div class="brand">
+            <i class="fas fa-code"></i>
+            <h1>EXN Tutor</h1>
+        </div>
+        
+        <form id="signupForm">
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="name" placeholder="Full Name" required>
+            </div>
+            
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            
+            <!-- In password input groups -->
+<div class="input-group">
+    <i class="fas fa-lock"></i>
+    <input type="password" placeholder="Password" id="password" required>
+    <i class="fas fa-eye password-toggle"></i>
+    <!-- Add after password input -->
+<div class="password-strength">
+    <div class="strength-bar" id="password-strength"></div>
+</div>
+</div>
+            
+            <button type="submit">Create Account</button>
+            <p class="login-link">Already have an account? <a href="index.html">Login here</a></p>
+        </form>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+/* index.css */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #2d3748;
+    --primary: #2A5CFF;
+    --input-bg: #edf2f7;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a202c;
+    --text-color: #ffffff;
+    --input-bg: #2d3748;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.brand {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.input-group i {
+    
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 1rem;
+    
+   
+}
+.password-toggle {
+    position: absolute;
+    left: auto;
+    cursor: pointer;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    transform: translateY(-50%);
+    text-align: right;
+    width: 1.5rem;
+    margin-left: 75%;
+}
+
+.password-toggle:hover {
+    opacity: 1;
+}
+/* Add to your login.css */
+.error-message {
+    color: #e53e3e;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.invalid {
+    border-color: #e53e3e !important;
+    background: #fff5f5 !important;
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+.icon-left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+.frmctr {
+   width: 100%;
+  padding-left: 30px; /* Space for left icon */
+  padding-right: 30px; /* Space for right icon */
+}
+.circle {
+    padding: 50px; /* Adjust as needed */
+    border-radius: 50%;
+    background-color: #007bff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  a {
+     text-decoration: none;
+  }

@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/index.html",
+      "methods": ["GET"]
+    }
+  ],
+  "rewrites": [
+    { "source": "/admin", "destination": "/admin.html" }
+  ]
+}

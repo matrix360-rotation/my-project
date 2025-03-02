@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXN Tutor - Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="brand">
+            <i class="fas fa-code"></i>
+            <h1>EXN Tutor</h1>
+        </div>
+        <button class="cta-button" onclick="window.location.href='home.html'">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </button>
+    </nav>
+
+    <main class="form-container">
+        <h1 id="formTitle"></h1>
+        <p id="formDescription"></p>
+        
+        <form id="quizForm">
+            <div id="questionsContainer"></div>
+            
+            <div class="form-footer">
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-paper-plane"></i> Submit Form
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <script src="form.js"></script>
+</body>
+</html>

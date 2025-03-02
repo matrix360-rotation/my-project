@@ -1,0 +1,165 @@
+/* form.css */
+:root {
+    --primary: #2A5CFF;
+    --bg-color: #ffffff;
+    --text-color: #1a202c;
+    --card-bg: #f8fafc;
+    --border: #e2e8f0;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    --danger: #e53e3e;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a202c;
+    --text-color: #f8fafc;
+    --card-bg: #2d3748;
+    --border: #4a5568;
+}
+
+/* Base Styles */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Navigation */
+.form-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--bg-color);
+    box-shadow: var(--shadow);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand i {
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+/* Form Container */
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h1 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+/* Questions & Options */
+.question-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.03);
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.option-item:hover {
+    background: rgba(0,0,0,0.05);
+    transform: translateX(5px);
+}
+
+.option-item input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+}
+
+/* Submit Button */
+.submit-section {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.submit-button {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+}
+
+/* Invalid State */
+input:invalid {
+    border-color: var(--danger);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .form-nav {
+        padding: 1rem;
+    }
+    
+    .question-card {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .option-item {
+        padding: 0.75rem;
+    }
+    
+    .submit-button {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand h1 {
+        font-size: 1.25rem;
+    }
+    
+    .form-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .option-item {
+        gap: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+

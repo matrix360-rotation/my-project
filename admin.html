@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXN Tutor - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-dashboard">
+    <div class="admin-header">
+        <h1><i class="fas fa-shield-alt"></i> Admin Dashboard</h1>
+        <button class="logout-btn" onclick="Admin.logout()">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
+
+    <nav class="admin-nav">
+        <button data-section="members">
+            <i class="fas fa-users"></i> Members
+        </button>
+        <button data-section="requests">
+            <i class="fas fa-inbox"></i> Requests
+        </button>
+        <button data-section="mail">
+            <i class="fas fa-envelope"></i> Mail
+        </button>
+        <button data-section="forms">
+            <i class="fas fa-file-alt"></i> Forms
+        </button>
+        <button data-section="submissions">
+            <i class="fas fa-file-import"></i> Submissions
+        </button>
+    </nav>
+
+    <div id="adminContent" class="admin-content">
+        <!-- Dynamic content loaded here -->
+    </div>
+
+    <!-- Submission Modal -->
+    <div id="submissionModal" class="admin-modal">
+        <div class="modal-content">
+            <span class="close" onclick="Admin.closeSubmissionModal()">&times;</span>
+            <h3 id="submissionStudent"></h3>
+            <div id="submissionDetails"></div>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* signup.css */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #2d3748;
+    --primary: #2A5CFF;
+    --input-bg: #edf2f7;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --error: #e53e3e;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a202c;
+    --text-color: #ffffff;
+    --input-bg: #2d3748;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    width: 90%;
+    max-width: 400px;
+    padding: 2rem;
+    background: var(--bg-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.input-group {
+    position: relative;
+    margin: 1rem 0;
+}
+
+.input-group i {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+}
+
+input {
+    width: 100%;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    background: var(--input-bg);
+    color: var(--text-color);
+}
+
+button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.error-message {
+    color: var(--error);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+.password-toggle {
+   position: absolute;
+   left: auto;
+   cursor: pointer;
+   color: var(--text-color);
+   opacity: 0.7;
+   transition: opacity 0.2s;
+   transform: translateY(-50%);
+   text-align: right;
+   width: 1.5rem;
+   margin-left: 75%;
+}
+
+.password-toggle:hover {
+   opacity: 1;
+}
+.password-strength {
+    height: 4px;
+    background: #e2e8f0;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e53e3e;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.invalid {
+    border-color: #e53e3e !important;
+    background: #fff5f5 !important;
+}
+a {
+   text-decoration: none;
+}

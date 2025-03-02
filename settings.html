@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - EXN Tutor</title>
+    <link rel="stylesheet" href="settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="settings-container">
+        <div class="settings-header">
+            <h1><i class="fas fa-cog"></i> Settings</h1>
+            <button class="home-btn" onclick="window.location.href='home.html'">
+                <i class="fas fa-home"></i> Back to Home
+            </button>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <i class="fas fa-moon"></i>
+                <span>Dark Mode</span>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <i class="fas fa-globe"></i>
+                <span>Language</span>
+            </div>
+            <select id="languageSelect" class="language-select">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="zh">中文</option>
+                <option value="sw">Kiswahili</option>
+            </select>
+        </div>
+
+        <div class="setting-item">
+            <div class="setting-info">
+                <i class="fas fa-shield-alt"></i>
+                <span>Admin Access</span>
+            </div>
+            <div class="admin-login">
+                <input type="password" id="adminPassword" placeholder="Enter admin password">
+                <button onclick="handleAdminLogin()" class="cta-button small">
+                    <i class="fas fa-lock-open"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="setting-item logout">
+            <button onclick="handleLogout()" class="cta-button danger">
+                <i class="fas fa-sign-out-alt"></i> Log Out
+            </button>
+        </div>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
