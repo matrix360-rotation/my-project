@@ -1,14 +1,14 @@
 {
   "rewrites": [
+    
     {
       "source": "/admin",
-      "destination": "/admin.html",
-      "methods": ["GET"]
+      "destination": "/admin.html"
     },
+    
     {
       "source": "/(.*)",
-      "destination": "/index.html",
-      "methods": ["GET"]
+      "destination": "/index.html"
     }
   ]
 }
